@@ -1,0 +1,201 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":5,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2aea198244f52ac2c01a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.21348314606741,\"y\":318.7415730337079,\"z\":2000,\"width\":1221.573033707865,\"height\":359.19101123595505,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Series\":[{\"queryRef\":\"Weekly Transactions.Date\"}],\"Category\":[{\"queryRef\":\"Weekly Transactions.Payee / Payer\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Weekly Transactions.Credit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"},\"Name\":\"Weekly Transactions.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Credit)\",\"NativeReferenceName\":\"Sum of Credit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"},\"Name\":\"Weekly Transactions.Payee / Payer\",\"NativeReferenceName\":\"Payee / Payer\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Legend'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Dollars Credited To Investors - Day Over Day'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.19,
+          "width": 1221.57,
+          "x": 37.21,
+          "y": 318.74,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"37f060ac137350d85e8d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":441.7078651685393,\"y\":29.123595505617978,\"z\":1000,\"width\":355.9550561797753,\"height\":279.91011235955057,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Weekly Transactions.Debit)\"},{\"queryRef\":\"Sum(Weekly Transactions.Credit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Debit)\",\"NativeReferenceName\":\"Total Debits\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Credit)\",\"NativeReferenceName\":\"Total Credits\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Weekly Transactions.Debit)\":{\"displayName\":\"Total Debits\"},\"Sum(Weekly Transactions.Credit)\":{\"displayName\":\"Total Credits\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Legend'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 279.91,
+          "width": 355.96,
+          "x": 441.71,
+          "y": 29.12,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"5fa45ad56218af221221\",\"layouts\":[{\"id\":0,\"position\":{\"x\":37.21348314606741,\"y\":27.50561797752809,\"z\":0,\"width\":279.91011235955057,\"height\":279.91011235955057,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Weekly Transactions.Real Loss\"},{\"queryRef\":\"Sum(Weekly Transactions.Debit)\"},{\"queryRef\":\"Sum(Weekly Transactions.Balance)\"}],\"Category\":[{\"queryRef\":\"Weekly Transactions.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Real Loss\"},\"Name\":\"Weekly Transactions.Real Loss\",\"NativeReferenceName\":\"Expenses\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"},\"Name\":\"Weekly Transactions.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Debit)\",\"NativeReferenceName\":\"Income\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Balance\"}},\"Function\":0}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Balance\"}},\"Function\":0}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"Sum(Weekly Transactions.Balance)\",\"NativeReferenceName\":\"Cash On Hand\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"}}}]},\"columnProperties\":{\"Sum(Weekly Transactions.Debit)\":{\"displayName\":\"Income\"},\"Weekly Transactions.Real Loss\":{\"displayName\":\"Expenses\"},\"Sum(Weekly Transactions.Balance)\":{\"displayName\":\"Cash On Hand\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Day Over Day Cashflow'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 279.91,
+          "width": 279.91,
+          "x": 37.21,
+          "y": 27.51,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection212477106facf2eedf46",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4fd973822cad2fd2ab11\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63.73547289083394,\"y\":360.50376853877947,\"z\":2000,\"width\":352.5368344274252,\"height\":221.08242159008023,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Weekly Transactions.Property\"},{\"queryRef\":\"Sum(Weekly Transactions.Debit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Debit)\",\"NativeReferenceName\":\"Sum of Debit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Property\"},\"Name\":\"Weekly Transactions.Property\",\"NativeReferenceName\":\"Property\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"167.66934111354243D\"}}}},\"selector\":{\"metadata\":\"Sum(Weekly Transactions.Debit)\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'The 3 Highest Earning Properties'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Weekly Transactions\"}},\"Property\":\"Property\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Property\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0}}}],\"Top\":3}}},\"Type\":2},{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Property\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 221.08,
+          "width": 352.54,
+          "x": 63.74,
+          "y": 360.50,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7418da3854fe234fc3fc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63.73547289083394,\"y\":57.76027230731826,\"z\":0,\"width\":352.5368344274252,\"height\":221.08242159008023,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Weekly Transactions.Payee / Payer\"},{\"queryRef\":\"Sum(Weekly Transactions.Debit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"},\"Name\":\"Weekly Transactions.Payee / Payer\",\"NativeReferenceName\":\"Payee / Payer\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Debit)\",\"NativeReferenceName\":\"Sum of Debit\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"167.66934111354243D\"}}}},\"selector\":{\"metadata\":\"Sum(Weekly Transactions.Debit)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"165.6858740578653D\"}}}},\"selector\":{\"metadata\":\"Weekly Transactions.Payee / Payer\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'The Top 3 Highest Earning Customers'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Weekly Transactions\"}},\"Property\":\"Payee / Payer\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0}}}],\"Top\":3}}},\"Type\":2},{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 221.08,
+          "width": 352.54,
+          "x": 63.74,
+          "y": 57.76,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"aa4c6eacec2a53c00b24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":464.07391198638464,\"y\":360.50376853877947,\"z\":3000,\"width\":352.5368344274252,\"height\":221.08242159008023,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Weekly Transactions.Property\"},{\"queryRef\":\"Sum(Weekly Transactions.Credit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Property\"},\"Name\":\"Weekly Transactions.Property\",\"NativeReferenceName\":\"Property\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Credit)\",\"NativeReferenceName\":\"Sum of Credit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"137.97841285431252D\"}}}},\"selector\":{\"metadata\":\"Sum(Weekly Transactions.Credit)\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"100.84887760370954D\"}}}},\"selector\":{\"metadata\":\"Weekly Transactions.Property\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'The 3 Most Expensive Properties To Manage'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Weekly Transactions\"}},\"Property\":\"Property\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Property\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0}}}],\"Top\":3}}},\"Type\":2},{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Property\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 221.08,
+          "width": 352.54,
+          "x": 464.07,
+          "y": 360.50,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"be4d6eebda4fb7ab212e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":493.949914903963,\"y\":59.75200583515682,\"z\":1000,\"width\":284.81789448091416,\"height\":221.08242159008023,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Weekly Transactions.Payee / Payer\"},{\"queryRef\":\"Sum(Weekly Transactions.Credit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"},\"Name\":\"Weekly Transactions.Payee / Payer\",\"NativeReferenceName\":\"Payee / Payer\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Credit)\",\"NativeReferenceName\":\"Sum of Credit\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"165.6858740578653D\"}}}},\"selector\":{\"metadata\":\"Weekly Transactions.Payee / Payer\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 3 Most Expensive Customers'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Weekly Transactions\"}},\"Property\":\"Payee / Payer\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0}}}],\"Top\":3}}},\"Type\":2},{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 221.08,
+          "width": 284.82,
+          "x": 493.95,
+          "y": 59.75,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 5",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection25d36759b5554d52db95",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"08b1a32f127ca4d0317d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":49.79333819596402,\"y\":35.85120350109409,\"z\":1,\"width\":627.3960612691466,\"height\":324.6525650376854,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"decompositionTreeVisual\",\"projections\":{\"Analyze\":[{\"queryRef\":\"Weekly Transactions.Cash Flow\"}],\"ExplainBy\":[{\"queryRef\":\"Weekly Transactions.Credit\",\"active\":true},{\"queryRef\":\"Weekly Transactions.Balance\"},{\"queryRef\":\"Weekly Transactions.Debit\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Cash Flow\"},\"Name\":\"Weekly Transactions.Cash Flow\",\"NativeReferenceName\":\"Cash Flow\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"},\"Name\":\"Weekly Transactions.Debit\",\"NativeReferenceName\":\"Debit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"},\"Name\":\"Weekly Transactions.Credit\",\"NativeReferenceName\":\"Credit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Balance\"},\"Name\":\"Weekly Transactions.Balance\",\"NativeReferenceName\":\"Balance\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Cash Flow\"}}}]},\"expansionStates\":[{\"roles\":[\"ExplainBy\"],\"levels\":[{\"queryRefs\":[\"Weekly Transactions.Credit\"],\"isCollapsed\":true,\"isPinned\":true,\"AIInformation\":{\"method\":\"MaxSplit\"}},{\"queryRefs\":[\"Weekly Transactions.Balance\"],\"isCollapsed\":true},{\"queryRefs\":[\"Weekly Transactions.Debit\"],\"isCollapsed\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"tree\":[{\"properties\":{\"effectiveBarsPerLevel\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}],\"insights\":[{\"properties\":{\"isAINode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Weekly Transactions\"}},\"Property\":\"Credit\"}},\"Right\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}]}}}",
+          "filters": "[]",
+          "height": 324.65,
+          "width": 627.40,
+          "x": 49.79,
+          "y": 35.85,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 4",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection3e9bd93c550da09f06a8",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6db9c9c5f13325ef7047\",\"layouts\":[{\"id\":0,\"position\":{\"x\":71.70240700218818,\"y\":37.84293702893265,\"z\":0,\"width\":1135.2881108679796,\"height\":647.3133965475322,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Weekly Transactions.Real Loss\"},{\"queryRef\":\"Sum(Weekly Transactions.Debit)\"},{\"queryRef\":\"Sum(Weekly Transactions.Balance)\"}],\"Category\":[{\"queryRef\":\"Weekly Transactions.Date\",\"active\":true},{\"queryRef\":\"Weekly Transactions.Payee / Payer\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Real Loss\"},\"Name\":\"Weekly Transactions.Real Loss\",\"NativeReferenceName\":\"Expenses\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"},\"Name\":\"Weekly Transactions.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Debit)\",\"NativeReferenceName\":\"Income\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Balance\"}},\"Function\":0}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Balance\"}},\"Function\":0}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"Sum(Weekly Transactions.Balance)\",\"NativeReferenceName\":\"%GT Sum of Balance\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"},\"Name\":\"Weekly Transactions.Payee / Payer\",\"NativeReferenceName\":\"Payee / Payer\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"}}}]},\"columnProperties\":{\"Sum(Weekly Transactions.Debit)\":{\"displayName\":\"Income\"},\"Weekly Transactions.Real Loss\":{\"displayName\":\"Expenses\"},\"Sum(Weekly Transactions.Balance)\":{\"displayName\":\"Cash On Hand\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"preferredCategoryWidth\":{\"expr\":{\"Literal\":{\"Value\":\"101D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Day Over Day Cashflow By Investor'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Weekly Transactions\"}},\"Property\":\"Balance\"}},\"Function\":8}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 647.31,
+          "width": 1135.29,
+          "x": 71.70,
+          "y": 37.84,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 6",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection408f935eb15e1cc1cd23",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"d1dbe441eb8a41bb3d81\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.834670556771215,\"y\":25.892535861901287,\"z\":0,\"width\":1203.0070508144906,\"height\":649.3051300753708,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"keyDriversVisual\",\"projections\":{\"Target\":[{\"queryRef\":\"Weekly Transactions.Cash Flow\"}],\"ExplainBy\":[{\"queryRef\":\"Weekly Transactions.Date\"},{\"queryRef\":\"Sum(Weekly Transactions.Debit)\"},{\"queryRef\":\"Sum(Weekly Transactions.Credit)\"},{\"queryRef\":\"Sum(Weekly Transactions.Balance)\"},{\"queryRef\":\"Weekly Transactions.Real Loss\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Cash Flow\"},\"Name\":\"Weekly Transactions.Cash Flow\",\"NativeReferenceName\":\"Cash Flow\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Debit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Debit)\",\"NativeReferenceName\":\"Sum of Debit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"},\"Name\":\"Weekly Transactions.Date\",\"NativeReferenceName\":\"Date\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Credit)\",\"NativeReferenceName\":\"Sum of Credit\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Balance\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Balance)\",\"NativeReferenceName\":\"Sum of Balance\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Real Loss\"},\"Name\":\"Weekly Transactions.Real Loss\",\"NativeReferenceName\":\"Real Loss\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"keyDrivers\":[{\"properties\":{\"selectedAnalysis\":{\"expr\":{\"Literal\":{\"Value\":\"'keyInfluencers'\"}}},\"numericTargetSelectedKind\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 649.31,
+          "width": 1203.01,
+          "x": 39.83,
+          "y": 25.89,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionb164ecf00382856ca6a3",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"9727581073e9fe25f8a9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":29.123595505617978,\"y\":22.651685393258425,\"z\":0,\"width\":1221.573033707865,\"height\":359.19101123595505,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Weekly Transactions.Credit)\"}],\"Category\":[{\"queryRef\":\"Weekly Transactions.Payee / Payer\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0},\"Name\":\"Sum(Weekly Transactions.Credit)\",\"NativeReferenceName\":\"Sum of Credit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Payee / Payer\"},\"Name\":\"Weekly Transactions.Payee / Payer\",\"NativeReferenceName\":\"Payee / Payer\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Credit\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Legend'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Which Investors Did We Pay Out The Most ?'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.19,
+          "width": 1221.57,
+          "x": 29.12,
+          "y": 22.65,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c8dd4722d307122e9f2b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":210.33707865168537,\"y\":381.8426966292135,\"z\":1000,\"width\":888.2696629213483,\"height\":310.6516853932584,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Weekly Transactions.Cash Flow\"}],\"Category\":[{\"queryRef\":\"Weekly Transactions.Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Weekly Transactions\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Cash Flow\"},\"Name\":\"Weekly Transactions.Cash Flow\",\"NativeReferenceName\":\"Cash Flow\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"},\"Name\":\"Weekly Transactions.Date\",\"NativeReferenceName\":\"Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Legend'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Day Over Day Cash Flow'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 310.65,
+          "width": 888.27,
+          "x": 210.34,
+          "y": 381.84,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

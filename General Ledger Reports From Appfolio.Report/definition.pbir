@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../General Ledger Reports From Appfolio.Dataset"
+    },
+    "byConnection": null
+  }
+}
